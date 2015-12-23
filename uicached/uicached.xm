@@ -65,8 +65,13 @@
             return;
         }
     
+    //bool respring(false);
+    
     NSString *home(NSHomeDirectory());
     NSString *path([NSString stringWithFormat:@"%@/Library/Caches/com.apple.mobile.installation.plist", home]);
+    
+    //system("killall -SIGSTOP SpringBoard");
+    //sleep(1);
     
     @try {
         system("killall lsd");
@@ -160,7 +165,7 @@
         } else fprintf(stderr, "cannot open cache file. incorrect user?\n");
     cached:
         
-        if (kCFCoreFoundationVersionNumber >= 550.32) {
+        if (/*respring || */kCFCoreFoundationVersionNumber >= 550.32) {
             unlink([[NSString stringWithFormat:@"%@/Library/Caches/com.apple.springboard-imagecache-icons", home] UTF8String]);
             unlink([[NSString stringWithFormat:@"%@/Library/Caches/com.apple.springboard-imagecache-icons.plist", home] UTF8String]);
             
@@ -176,10 +181,13 @@
         system("killall installd");
         
     } @finally {
-        
+        //system("killall -SIGCONT SpringBoard");
     }
     
-    notify_post("com.apple.mobile.application_installed");
+    //if (respring)
+        //system("launchctl stop com.apple.SpringBoard");
+    //else
+        notify_post("com.apple.mobile.application_installed");
 }
 
 %end
