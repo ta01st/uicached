@@ -1,0 +1,344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0FA3CC901C2A53D900926A51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FA3CC8F1C2A53D900926A51 /* Foundation.framework */; };
+		0FA3CC9B1C2A53D900926A51 /* uicached.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3CC9A1C2A53D900926A51 /* uicached.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0FA3CC8C1C2A53D900926A51 /* uicached.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = uicached.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FA3CC8F1C2A53D900926A51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0FA3CC941C2A53D900926A51 /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
+		0FA3CC951C2A53D900926A51 /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		0FA3CC971C2A53D900926A51 /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
+		0FA3CC981C2A53D900926A51 /* uicached-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uicached-Prefix.pch"; sourceTree = "<group>"; };
+		0FA3CC991C2A53D900926A51 /* uicached.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = uicached.xm; sourceTree = "<group>"; };
+		0FA3CC9A1C2A53D900926A51 /* uicached.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = uicached.mm; sourceTree = "<group>"; };
+		0FA3CC9F1C2A53D900926A51 /* uicached.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = uicached.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/uicached.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0FA3CC881C2A53D900926A51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FA3CC901C2A53D900926A51 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FA3CC811C2A53D900926A51 = {
+			isa = PBXGroup;
+			children = (
+				0FA3CC911C2A53D900926A51 /* uicached */,
+				0FA3CC8E1C2A53D900926A51 /* Frameworks */,
+				0FA3CC8D1C2A53D900926A51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0FA3CC8D1C2A53D900926A51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0FA3CC8C1C2A53D900926A51 /* uicached.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0FA3CC8E1C2A53D900926A51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FA3CC8F1C2A53D900926A51 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0FA3CC911C2A53D900926A51 /* uicached */ = {
+			isa = PBXGroup;
+			children = (
+				0FA3CC991C2A53D900926A51 /* uicached.xm */,
+				0FA3CC9A1C2A53D900926A51 /* uicached.mm */,
+				0FA3CC921C2A53D900926A51 /* Package */,
+				0FA3CC961C2A53D900926A51 /* Supporting Files */,
+			);
+			path = uicached;
+			sourceTree = "<group>";
+		};
+		0FA3CC921C2A53D900926A51 /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				0FA3CC931C2A53D900926A51 /* DEBIAN */,
+				0FA3CC9C1C2A53D900926A51 /* Library */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		0FA3CC931C2A53D900926A51 /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				0FA3CC941C2A53D900926A51 /* control.txt */,
+				0FA3CC951C2A53D900926A51 /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		0FA3CC961C2A53D900926A51 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0FA3CC971C2A53D900926A51 /* PackageVersion.plist */,
+				0FA3CC981C2A53D900926A51 /* uicached-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0FA3CC9C1C2A53D900926A51 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				0FA3CC9D1C2A53D900926A51 /* MobileSubstrate */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		0FA3CC9D1C2A53D900926A51 /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				0FA3CC9E1C2A53D900926A51 /* DynamicLibraries */,
+			);
+			name = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		0FA3CC9E1C2A53D900926A51 /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				0FA3CC9F1C2A53D900926A51 /* uicached.plist */,
+			);
+			name = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0FA3CC891C2A53D900926A51 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0FA3CC8B1C2A53D900926A51 /* uicached */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FA3CCA21C2A53D900926A51 /* Build configuration list for PBXNativeTarget "uicached" */;
+			buildPhases = (
+				0FA3CC861C2A53D900926A51 /* ShellScript */,
+				0FA3CC871C2A53D900926A51 /* Sources */,
+				0FA3CC881C2A53D900926A51 /* Frameworks */,
+				0FA3CC891C2A53D900926A51 /* Headers */,
+				0FA3CC8A1C2A53D900926A51 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = uicached;
+			productName = uicached;
+			productReference = 0FA3CC8C1C2A53D900926A51 /* uicached.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0FA3CC821C2A53D900926A51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				TargetAttributes = {
+					0FA3CC8B1C2A53D900926A51 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 0FA3CC851C2A53D900926A51 /* Build configuration list for PBXProject "uicached" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0FA3CC811C2A53D900926A51;
+			productRefGroup = 0FA3CC8D1C2A53D900926A51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0FA3CC8B1C2A53D900926A51 /* uicached */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FA3CC861C2A53D900926A51 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos";
+		};
+		0FA3CC8A1C2A53D900926A51 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0FA3CC871C2A53D900926A51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FA3CC9B1C2A53D900926A51 /* uicached.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0FA3CCA01C2A53D900926A51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Debug;
+		};
+		0FA3CCA11C2A53D900926A51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Release;
+		};
+		0FA3CCA31C2A53D900926A51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "uicached/uicached-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+		0FA3CCA41C2A53D900926A51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "uicached/uicached-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0FA3CC851C2A53D900926A51 /* Build configuration list for PBXProject "uicached" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FA3CCA01C2A53D900926A51 /* Debug */,
+				0FA3CCA11C2A53D900926A51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0FA3CCA21C2A53D900926A51 /* Build configuration list for PBXNativeTarget "uicached" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FA3CCA31C2A53D900926A51 /* Debug */,
+				0FA3CCA41C2A53D900926A51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0FA3CC821C2A53D900926A51 /* Project object */;
+}
