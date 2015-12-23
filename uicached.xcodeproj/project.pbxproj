@@ -9,18 +9,19 @@
 /* Begin PBXBuildFile section */
 		0FA3CC901C2A53D900926A51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FA3CC8F1C2A53D900926A51 /* Foundation.framework */; };
 		0FA3CC9B1C2A53D900926A51 /* uicached.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3CC9A1C2A53D900926A51 /* uicached.mm */; };
+		0FA3CCA61C2A53ED00926A51 /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FA3CCA51C2A53ED00926A51 /* libsubstrate.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0FA3CC8C1C2A53D900926A51 /* uicached.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = uicached.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FA3CC8F1C2A53D900926A51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0FA3CC941C2A53D900926A51 /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
 		0FA3CC951C2A53D900926A51 /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
 		0FA3CC971C2A53D900926A51 /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
 		0FA3CC981C2A53D900926A51 /* uicached-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uicached-Prefix.pch"; sourceTree = "<group>"; };
-		0FA3CC991C2A53D900926A51 /* uicached.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = uicached.xm; sourceTree = "<group>"; };
+		0FA3CC991C2A53D900926A51 /* uicached.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = uicached.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		0FA3CC9A1C2A53D900926A51 /* uicached.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = uicached.mm; sourceTree = "<group>"; };
 		0FA3CC9F1C2A53D900926A51 /* uicached.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = uicached.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/uicached.plist; sourceTree = "<group>"; };
+		0FA3CCA51C2A53ED00926A51 /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsubstrate.dylib; path = ../../../../opt/theos/lib/libsubstrate.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FA3CCA61C2A53ED00926A51 /* libsubstrate.dylib in Frameworks */,
 				0FA3CC901C2A53D900926A51 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +57,7 @@
 		0FA3CC8E1C2A53D900926A51 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0FA3CCA51C2A53ED00926A51 /* libsubstrate.dylib */,
 				0FA3CC8F1C2A53D900926A51 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -83,7 +86,6 @@
 		0FA3CC931C2A53D900926A51 /* DEBIAN */ = {
 			isa = PBXGroup;
 			children = (
-				0FA3CC941C2A53D900926A51 /* control.txt */,
 				0FA3CC951C2A53D900926A51 /* control */,
 			);
 			name = DEBIAN;
@@ -228,7 +230,9 @@
 		0FA3CCA01C2A53D900926A51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zheng Wu (253D9QR4TP)";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(iOSOpenDevPath)/frameworks/**",
@@ -246,7 +250,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -258,7 +262,9 @@
 		0FA3CCA11C2A53D900926A51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zheng Wu (253D9QR4TP)";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(iOSOpenDevPath)/frameworks/**",
@@ -269,7 +275,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -281,18 +287,22 @@
 		0FA3CCA31C2A53D900926A51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zheng Wu (253D9QR4TP)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "uicached/uicached-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/theos/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
 				iOSOpenDevDevice = "";
 				iOSOpenDevInstallOnAnyBuild = NO;
-				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevInstallOnProfiling = NO;
 				iOSOpenDevRespringOnInstall = YES;
 				iOSOpenDevUsePackageVersionPList = YES;
 			};
@@ -301,18 +311,22 @@
 		0FA3CCA41C2A53D900926A51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zheng Wu (253D9QR4TP)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "uicached/uicached-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/theos/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
 				iOSOpenDevDevice = "";
 				iOSOpenDevInstallOnAnyBuild = NO;
-				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevInstallOnProfiling = NO;
 				iOSOpenDevRespringOnInstall = YES;
 				iOSOpenDevUsePackageVersionPList = YES;
 			};
@@ -337,6 +351,7 @@
 				0FA3CCA41C2A53D900926A51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
